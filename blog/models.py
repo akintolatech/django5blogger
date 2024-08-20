@@ -41,6 +41,10 @@ class Post(models.Model):
         default=Status.DRAFT
     )
 
+    # If you declare any managers for
+    # your model but you want to keep the objects manager as well,
+    # you have to add it explicitly to your model.
+
     objects = models.Manager()  # The default manager.
     published = PublishedManager()  # Our custom manager.
 
