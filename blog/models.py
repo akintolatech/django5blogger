@@ -41,6 +41,9 @@ class Post(models.Model):
         default=Status.DRAFT
     )
 
+    objects = models.Manager()  # The default manager.
+    published = PublishedManager()  # Our custom manager.
+
     class Meta:
         ordering = ["-publish"]
         indexes = [
