@@ -10,7 +10,7 @@ def post_list(request):
 
     return render(
         request,
-        "blog/post/list.html",
+        "blog/post/blog-list.html",
         {"posts": posts}
     )
 
