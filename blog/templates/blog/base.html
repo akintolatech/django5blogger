@@ -26,9 +26,9 @@
 
             <div class="pry-nav">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+<!--                    <li><a href="../index.html">Home</a></li>-->
+<!--                    <li><a href="shop.html">Shop</a></li>-->
+<!--                    <li><a href="blog.html">Blog</a></li>-->
                 </ul>
             </div>
 
@@ -57,16 +57,18 @@
 
     <div class="about">
 
-        <h1> 
-            Research Department
+        <h1>
+            {% block banner_label %} {% endblock %}
         </h1>
 
     </div>
 
     <div id="main" >
+
         <div class="back-drop"></div>
         {% block content %}
         {% endblock %}
+
     </div>
 
     <!-- footer -->
