@@ -19,6 +19,7 @@ class Post(models.Model):
         DRAFT = "DF", "Draft"
         PUBLISHED = "PB", "Published"
 
+    post_img = models.ImageField(upload_to="blog_img/", null=True)
     title = models.CharField(max_length=33)
     slug = models.SlugField(max_length=250)
     body = models.TextField()

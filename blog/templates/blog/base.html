@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link type="text/css" href="{% static 'styles/styles.css' %}" rel="stylesheet" >
+    <link type="text/css" href="{% static 'styles/about.css' %}" rel="stylesheet" >
+    <link type="x-icon" href="{% static 'img/lotus.ico' %}" rel="icon" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/toggle.js"></script>
+<!--    <script language="javascript" src="../js/blog/assignBlog.js"></script>-->
+</head>
+<body>
+
+    <!-- header -->
+    <div id="header">
+
+        <div class="header_wrap">
+
+            <div id="site-id">
+                <img src="{% static 'img/lotuslogo-01.svg' %}" alt="lotus studios">
+            </div>
+
+            <div class="pry-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="nav">
+
+                <svg version="1.1"  x="0px" y="0px"
+                    viewBox="0 0 40 40" xml:space="preserve">
+                    
+                    <g>
+                    <!-- Add a class to each rect element to style and target them individually -->
+                    <rect x="4.6" y="10.5" class="st0 bar1" width="30.8" height="4"/>
+                    <rect x="4.6" y="18" class="st0 bar2" width="30.8" height="4"/>
+                    <rect x="4.6" y="25.5" class="st0 bar3" width="30.8" height="4"/>
+                    </g>
+
+                </svg>
+
+            </div> 
+
+
+        </div>
+
+    </div>
+
+    <div class="padding" style="height: 0px;"></div>
+
+    <div class="about">
+
+        <h1> 
+            Research Department
+        </h1>
+
+    </div>
+
+    <div id="main" >
+        <div class="back-drop"></div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- footer -->
+    <div class="foot-header">
+        <div id="foot-id">
+            <img src="{% static 'img/lotus-studios-light-02.svg' %}" alt="lotus studios">
+        </div>
+        <p>Designed and Developed by Akintola Technologies | All rights reserved &copy <span class="year">202 </span> </p>
+    
+     </div>
+
+</body>
+
+
+  <script language="javascript" src="{% static 'js/year.js' %}"></script>
+
+</html>
